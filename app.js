@@ -1,9 +1,9 @@
-//Default variables:
+// Default variables:
 let selectedDimension = 16;
 let colorChoice = 'black';
 let mouseDown = false;
 
-// Function to generate canvas grid/defaults:
+// Function to generate canvas grid:
 function generateCanvas(n)
 {
     let canvas = document.querySelector('.canvas');
@@ -43,6 +43,7 @@ function changePixelColor(e)
         return;
     }
 }
+
 // Update selected color when button presed:
 const colorOptions = document.querySelectorAll('[data-color]');
 
@@ -65,7 +66,7 @@ dimensionOptions.forEach(option =>
         });
     });
 
-// Reset canvas when button is pressed:
+// Reset canvas when button pressed:
 let resetButton = document.querySelector('#reset-btn');
 resetButton.addEventListener('click', () =>
 {
