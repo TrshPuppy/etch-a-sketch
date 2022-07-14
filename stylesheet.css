@@ -1,14 +1,7 @@
-#grid-container
+#canvas
 {
-    display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-auto-rows: 6.2vh;
-}
-
-#container
-{
-    border-color: blue;
-    border-style: double;
-    background-color: lavender;
+    width: 100vh;
+    height: 100vh;
+    display:grid;
 }
 

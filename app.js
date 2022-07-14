@@ -1,4 +1,29 @@
 // // Create x16 divs on DOM load:
+let canvas = document.querySelector('#canvas');
+
+canvas.style.gridTemplateColumns = "repeat(16, 1fr)";
+canvas.style.gridTemplateRows = "repeat(16, 1fr)";
+
+for(let i = 0; i < 256; i++)
+{
+    let pixel = document.createElement('div');
+    pixel.style.backgroundColor = "blue";
+    canvas.insertAdjacentElement('beforeend', pixel);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // var containerDiv = document.getElementById('grid-container');
 
 // document.addEventListener('DOMContentLoaded', function() 
