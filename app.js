@@ -17,7 +17,23 @@ function generateCanvas(n)
         colorChoice = 'red';
     });
 
+    let blueButton = document.querySelector('#blue-btn');
+    blueButton.addEventListener('click', () =>
+    {
+        colorChoice = 'blue';
+    });
 
+    let blackButton = document.querySelector('#black-btn');
+    blackButton.addEventListener('click', () =>
+    {
+        colorChoice = 'black';
+    });
+
+    let whiteButton = document.querySelector('#white-btn');
+    whiteButton.addEventListener('click', () =>
+    {
+        colorChoice = 'white';
+    });
 
     let amount = n * n;
     for(let i = 0; i < amount; i++)
