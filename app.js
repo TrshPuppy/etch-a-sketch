@@ -5,7 +5,6 @@ function generateCanvas(n)
     canvas = document.querySelector('.canvas');
     let pixels = canvas.querySelectorAll('div');
     pixels.forEach((div) => div.remove());
-    console.log(n);
     canvas.style.gridTemplateColumns = "repeat(" + n +", 1fr)";
     canvas.style.gridTemplateRows = "repeat(" + n +", 1fr)";
 
@@ -47,7 +46,15 @@ function generateCanvas(n)
             pixel.style.backgroundColor = colorChoice;
         });
     }
+
+    //Call to reset function:
+    let resetButton = document.querySelector('#reset-btn');
+    resetButton.addEventListener('click', () =>
+    {
+        resetCanvas(selectedDimension);
+    });
 }
+
 
 // Update selected dimension when button pressed:
 let selectedDimension = 4;
@@ -81,8 +88,7 @@ button128.addEventListener('click', () =>
 
 generateCanvas(selectedDimension);
 
-
-// // Some things I need:
-// - canvas dimensions (input)
-// - color of pen (input/button)
-// - reset function (reset button)
+function resetCanvas(dimension)
+{
+    generateCanvas(dimension);
+}
