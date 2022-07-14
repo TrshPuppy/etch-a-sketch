@@ -22,14 +22,6 @@ h1
     display:grid;
 }
 
-#pallette
-{
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    padding: 5px;
-}
-
 #menu
 {
     display:flex;

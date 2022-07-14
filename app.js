@@ -1,5 +1,5 @@
 // // Create x16 divs on DOM load:
-let canvas = document.querySelector('#canvas');
+let canvas = document.querySelector('.canvas');
 
 canvas.style.gridTemplateColumns = "repeat(16, 1fr)";
 canvas.style.gridTemplateRows = "repeat(16, 1fr)";
@@ -10,7 +10,7 @@ for(let i = 0; i < 256; i++)
     pixel.style.backgroundColor = "grey";
     canvas.insertAdjacentElement('beforeend', pixel);
 
-    pixel.addEventListener('mouseover', () =>
+    pixel.addEventListener('click', () =>
     {
         pixel.style.backgroundColor = "black";
     });
