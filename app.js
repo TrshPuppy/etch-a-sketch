@@ -1,8 +1,6 @@
-
-let canvas;
 function generateCanvas(n)
 {
-    canvas = document.querySelector('.canvas');
+    let canvas = document.querySelector('.canvas');
     let pixels = canvas.querySelectorAll('div');
     pixels.forEach((div) => div.remove());
     canvas.style.gridTemplateColumns = "repeat(" + n +", 1fr)";
@@ -58,28 +56,28 @@ function generateCanvas(n)
 
 // Update selected dimension when button pressed:
 let selectedDimension = 4;
-let button16 = document.querySelector('#sixteen');
+let button16 = document.querySelector('.sixteen');
 button16.addEventListener('click', () =>
 {
     selectedDimension = 16;
     generateCanvas(selectedDimension);
 });
 
-let button32 = document.querySelector('#thirty-two');
+let button32 = document.querySelector('.thirty-two');
 button32.addEventListener('click', () =>
 {
     selectedDimension = 32;
     generateCanvas(selectedDimension);
 });
 
-let button64 = document.querySelector('#sixty-four');
+let button64 = document.querySelector('.sixty-four');
 button64.addEventListener('click', () =>
 {
     selectedDimension = 64;
     generateCanvas(selectedDimension);
 })
 
-let button128 = document.querySelector('#one-twenty-eight');
+let button128 = document.querySelector('.one-twenty-eight');
 button128.addEventListener('click', () =>
 {
     selectedDimension = 128;
