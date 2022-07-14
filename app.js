@@ -1,4 +1,7 @@
-let colorChoice;
+//Default variables:
+let selectedDimension = 4;
+let colorChoice = 'black';
+
 function generateCanvas(n)
 {
     let canvas = document.querySelector('.canvas');
@@ -8,7 +11,6 @@ function generateCanvas(n)
     canvas.style.gridTemplateRows = "repeat(" + n +", 1fr)";
 
     //update selected color when button presed:
-    colorChoice = 'black';
     const colorOptions = document.querySelectorAll('[data-color]');
     
     colorOptions.forEach(option => 
@@ -52,7 +54,6 @@ dimensionOptions.forEach(option =>
         });
     });
 
-let selectedDimension = 4;
 
 generateCanvas(selectedDimension);
 
