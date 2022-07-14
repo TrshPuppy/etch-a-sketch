@@ -1,9 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Press+Start+2P&family=Trispace&display=swap');
+
 body
 {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    background-color:plum;
+}
+
+h1
+{
+    font-family: 'Press Start 2P', sans-serif;
+    color: orangered;
 }
 
 #canvas
@@ -15,10 +24,15 @@ body
 
 #menu
 {
-
+    padding: 10px;
 }
 
 button
 {
-    
+    background-color: blanchedalmond;
+    border-radius: 8px;
+    font-family: 'Trispace', sans-serif;
+    color:#301E51;
+    padding: 5px;
+    cursor: pointer;
 }
