@@ -20,6 +20,10 @@ h1
     width: 75vh;
     height: 75vh;
     display:grid;
+    border-style: double;
+    border-radius: 8px;
+    border-width: 10px;
+    border-color: #333333;
 }
 
 #menu
