@@ -1,5 +1,4 @@
-
-
+let colorChoice;
 function generateCanvas(n)
 {
     let canvas = document.querySelector('.canvas');
@@ -9,30 +8,17 @@ function generateCanvas(n)
     canvas.style.gridTemplateRows = "repeat(" + n +", 1fr)";
 
     //update selected color when button presed:
-    let colorChoice = 'black';
-    let redButton = document.querySelector('#red-btn');
-    redButton.addEventListener('click', () =>
-    {
-        colorChoice = 'red';
-    });
-
-    let blueButton = document.querySelector('#blue-btn');
-    blueButton.addEventListener('click', () =>
-    {
-        colorChoice = 'blue';
-    });
-
-    let blackButton = document.querySelector('#black-btn');
-    blackButton.addEventListener('click', () =>
-    {
-        colorChoice = 'black';
-    });
-
-    let whiteButton = document.querySelector('#white-btn');
-    whiteButton.addEventListener('click', () =>
-    {
-        colorChoice = 'white';
-    });
+    colorChoice = 'black';
+    const colorOptions = document.querySelectorAll('[data-color]');
+    
+    colorOptions.forEach(option => 
+        {
+            option.addEventListener('click', e =>
+            {
+                colorChoice = option.dataset.color;
+                
+            });
+        });
 
     let amount = n * n;
     for(let i = 0; i < amount; i++)
