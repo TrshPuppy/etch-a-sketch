@@ -1,20 +1,27 @@
-// // Create x16 divs on DOM load:
-let canvas = document.querySelector('.canvas');
 
-canvas.style.gridTemplateColumns = "repeat(16, 1fr)";
-canvas.style.gridTemplateRows = "repeat(16, 1fr)";
-
-for(let i = 0; i < 256; i++)
+let canvas;
+function generateCanvas(n)
 {
-    let pixel = document.createElement('div');
-    pixel.style.backgroundColor = "grey";
-    canvas.insertAdjacentElement('beforeend', pixel);
+    canvas = document.querySelector('.canvas');
+    console.log(n);
+    canvas.style.gridTemplateColumns = "repeat(" + n +", 1fr)";
+    canvas.style.gridTemplateRows = "repeat(" + n +", 1fr)";
 
-    pixel.addEventListener('click', () =>
+    let amount = n * n;
+    for(let i = 0; i < amount; i++)
     {
-        pixel.style.backgroundColor = "black";
-    });
+        let pixel = document.createElement('div');
+        pixel.style.backgroundColor = "grey";
+        canvas.insertAdjacentElement('beforeend', pixel);
+
+        pixel.addEventListener('mouseover', () =>
+        {
+            pixel.style.backgroundColor = "black";
+        });
+    }
 }
+
+generateCanvas(16);
 
 // // Some things I need:
 // - canvas dimensions (input)
