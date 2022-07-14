@@ -1,6 +1,7 @@
 //Default variables:
 let selectedDimension = 16;
 let colorChoice = 'black';
+let mouseDown = false;
 
 // Function to generate canvas grid/defaults:
 function generateCanvas(n)
@@ -18,13 +19,30 @@ function generateCanvas(n)
         pixel.style.backgroundColor = "white";
         canvas.insertAdjacentElement('beforeend', pixel);
 
-        pixel.addEventListener('mouseover', () =>
+        pixel.addEventListener('mousedown', () =>
         {
-            pixel.style.backgroundColor = colorChoice;
+            mouseDown = true;
         });
+        pixel.addEventListener('mouseover', changePixelColor);
+        pixel.addEventListener('mouseup', () =>
+        {
+            mouseDown = false;
+        });
+        pixel.addEventListener('click', changePixelColor);
     }
 }
 
+function changePixelColor(e)
+{
+    if(e.type === 'mouseover' && mouseDown == true || e.type === 'click')
+    {
+        e.target.style.backgroundColor = colorChoice;
+    }
+    else
+    {
+        return;
+    }
+}
 // Update selected color when button presed:
 const colorOptions = document.querySelectorAll('[data-color]');
 
