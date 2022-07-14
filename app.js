@@ -1,3 +1,5 @@
+
+
 function generateCanvas(n)
 {
     let canvas = document.querySelector('.canvas');
@@ -53,36 +55,46 @@ function generateCanvas(n)
     });
 }
 
-
 // Update selected dimension when button pressed:
+const dimensionOptions = document.querySelectorAll('[data-selection]');
+dimensionOptions.forEach(option => 
+    {
+        option.addEventListener('click', e =>
+        {
+            selectedDimension = parseInt(option.dataset.selection);
+        });
+    });
+
+
+
 let selectedDimension = 4;
-let button16 = document.querySelector('.sixteen');
-button16.addEventListener('click', () =>
-{
-    selectedDimension = 16;
-    generateCanvas(selectedDimension);
-});
+// let button16 = document.querySelector('.sixteen');
+// button16.addEventListener('click', () =>
+// {
+//     selectedDimension = 16;
+//     generateCanvas(selectedDimension);
+// });
 
-let button32 = document.querySelector('.thirty-two');
-button32.addEventListener('click', () =>
-{
-    selectedDimension = 32;
-    generateCanvas(selectedDimension);
-});
+// let button32 = document.querySelector('.thirty-two');
+// button32.addEventListener('click', () =>
+// {
+//     selectedDimension = 32;
+//     generateCanvas(selectedDimension);
+// });
 
-let button64 = document.querySelector('.sixty-four');
-button64.addEventListener('click', () =>
-{
-    selectedDimension = 64;
-    generateCanvas(selectedDimension);
-})
+// let button64 = document.querySelector('.sixty-four');
+// button64.addEventListener('click', () =>
+// {
+//     selectedDimension = 64;
+//     generateCanvas(selectedDimension);
+// })
 
-let button128 = document.querySelector('.one-twenty-eight');
-button128.addEventListener('click', () =>
-{
-    selectedDimension = 128;
-    generateCanvas(selectedDimension);
-})
+// let button128 = document.querySelector('.one-twenty-eight');
+// button128.addEventListener('click', () =>
+// {
+//     selectedDimension = 128;
+//     generateCanvas(selectedDimension);
+// })
 
 generateCanvas(selectedDimension);
 
