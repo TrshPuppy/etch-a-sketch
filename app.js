@@ -10,18 +10,6 @@ function generateCanvas(n)
     canvas.style.gridTemplateColumns = "repeat(" + n +", 1fr)";
     canvas.style.gridTemplateRows = "repeat(" + n +", 1fr)";
 
-    //update selected color when button presed:
-    const colorOptions = document.querySelectorAll('[data-color]');
-    
-    colorOptions.forEach(option => 
-        {
-            option.addEventListener('click', e =>
-            {
-                colorChoice = option.dataset.color;
-                
-            });
-        });
-
     let amount = n * n;
     for(let i = 0; i < amount; i++)
     {
@@ -42,6 +30,17 @@ function generateCanvas(n)
         resetCanvas(selectedDimension);
     });
 }
+
+//update selected color when button presed:
+const colorOptions = document.querySelectorAll('[data-color]');
+    
+colorOptions.forEach(option => 
+    {
+        option.addEventListener('click', e =>
+        {
+            colorChoice = option.dataset.color;
+        });
+    });
 
 // Update selected dimension when button pressed:
 const dimensionOptions = document.querySelectorAll('[data-selection]');
