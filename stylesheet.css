@@ -1,7 +1,14 @@
-#canvas
+body
 {
-    width: 100vh;
-    height: 100vh;
-    display:grid;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
+#canvas
+{
+    width: 75vh;
+    height: 75vh;
+    display:grid;
+}
