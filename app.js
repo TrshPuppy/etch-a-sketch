@@ -23,6 +23,7 @@ function generateCanvas(n)
     }
 }
 
+// Update selected dimension when button pressed:
 let selectedDimension = 4;
 let button16 = document.querySelector('#sixteen');
 button16.addEventListener('click', () =>
@@ -30,6 +31,14 @@ button16.addEventListener('click', () =>
     selectedDimension = 16;
     generateCanvas(selectedDimension);
 });
+
+let button32 = document.querySelector('#thirty-two');
+button32.addEventListener('click', () =>
+{
+    selectedDimension = 32;
+    generateCanvas(selectedDimension);
+});
+
 
 generateCanvas(selectedDimension);
 
