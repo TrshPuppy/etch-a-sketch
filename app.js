@@ -3,6 +3,8 @@ let canvas;
 function generateCanvas(n)
 {
     canvas = document.querySelector('.canvas');
+    let pixels = canvas.querySelectorAll('div');
+    pixels.forEach((div) => div.remove());
     console.log(n);
     canvas.style.gridTemplateColumns = "repeat(" + n +", 1fr)";
     canvas.style.gridTemplateRows = "repeat(" + n +", 1fr)";
@@ -26,9 +28,11 @@ let button16 = document.querySelector('#sixteen');
 button16.addEventListener('click', () =>
 {
     selectedDimension = 16;
+    generateCanvas(selectedDimension);
 });
 
 generateCanvas(selectedDimension);
+
 
 // // Some things I need:
 // - canvas dimensions (input)
