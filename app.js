@@ -21,7 +21,14 @@ function generateCanvas(n)
     }
 }
 
-generateCanvas(16);
+let selectedDimension = 4;
+let button16 = document.querySelector('#sixteen');
+button16.addEventListener('click', () =>
+{
+    selectedDimension = 16;
+});
+
+generateCanvas(selectedDimension);
 
 // // Some things I need:
 // - canvas dimensions (input)
