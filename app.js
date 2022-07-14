@@ -7,9 +7,16 @@ canvas.style.gridTemplateRows = "repeat(16, 1fr)";
 for(let i = 0; i < 256; i++)
 {
     let pixel = document.createElement('div');
-    pixel.style.backgroundColor = "blue";
+    pixel.style.backgroundColor = "purple";
     canvas.insertAdjacentElement('beforeend', pixel);
+
+    pixel.addEventListener('mouseover', () =>
+    {
+        pixel.style.backgroundColor = "black";
+    });
 }
+
+
 
 
 
