@@ -9,16 +9,26 @@ function generateCanvas(n)
     canvas.style.gridTemplateColumns = "repeat(" + n +", 1fr)";
     canvas.style.gridTemplateRows = "repeat(" + n +", 1fr)";
 
+    //update selected color when button presed:
+    let colorChoice = 'black';
+    let redButton = document.querySelector('#red-btn');
+    redButton.addEventListener('click', () =>
+    {
+        colorChoice = 'red';
+    });
+
+
+
     let amount = n * n;
     for(let i = 0; i < amount; i++)
     {
         let pixel = document.createElement('div');
-        pixel.style.backgroundColor = "grey";
+        pixel.style.backgroundColor = "white";
         canvas.insertAdjacentElement('beforeend', pixel);
 
         pixel.addEventListener('mouseover', () =>
         {
-            pixel.style.backgroundColor = "black";
+            pixel.style.backgroundColor = colorChoice;
         });
     }
 }
