@@ -39,6 +39,19 @@ button32.addEventListener('click', () =>
     generateCanvas(selectedDimension);
 });
 
+let button64 = document.querySelector('#sixty-four');
+button64.addEventListener('click', () =>
+{
+    selectedDimension = 64;
+    generateCanvas(selectedDimension);
+})
+
+let button128 = document.querySelector('#one-twenty-eight');
+button128.addEventListener('click', () =>
+{
+    selectedDimension = 128;
+    generateCanvas(selectedDimension);
+})
 
 generateCanvas(selectedDimension);
 
