@@ -10,21 +10,24 @@
     </head>
 
     <body>
-        <h1> Etch-a-Sketch</h1>
-        <div id="menu">
-            <h4>Canvas dimensions:</h4>
-            <button class="sixteen" data-selection = 16>16x16</button>
-            <button class="thirty-two" data-selection = 32>32x32</button>
-            <button class="sixty-four" data-selection=64>64x64</button>
-            <button class="one-twenty-eight"data-selection=128>128x128</button>
+        <div class = "main">
+            <h1> Etch-a-Sketch</h1>
+            <div id="menu">
+                <h4>Canvas dimensions:</h4>
+                <button class="sixteen" data-selection = 16>16x16</button>
+                <button class="thirty-two" data-selection = 32>32x32</button>
+                <button class="sixty-four" data-selection=64>64x64</button>
+                <button class="one-twenty-eight"data-selection=128>128x128</button>
+            </div>
+            <div class="canvas" draggable = "false">
+            </div>
+            <div id="menu">
+                <h4>Pen colors:</h4>
+                <button id="red-btn" data-color="red">Red</button><button id="blue-btn" data-color="blue">Blue</button><button id="black-btn" data-color="black">Black</button><button id="rainbow-btn" data-color="rainbow">Rainbow</button><button id="white-btn" 
+                data-color="white">Eraser</button><button id="reset-btn">Reset Canvas</button>
+            </div>
         </div>
-        <div class="canvas" draggable = "false">
-        </div>
-        <div id="menu">
-            <h4>Pen colors:</h4>
-            <button id="red-btn" data-color="red">Red</button><button id="blue-btn" data-color="blue">Blue</button><button id="black-btn" data-color="black">Black</button><button id="rainbow-btn" data-color="rainbow">Rainbow</button><button id="white-btn" 
-            data-color="white">Eraser</button><button id="reset-btn">Reset Canvas</button>
-        </div>
+        
         <script src = 'app.js' charset = 'UTF-8'></script>
     </body>
 </html>
