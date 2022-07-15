@@ -66,7 +66,7 @@ dimensionOptions.forEach(option =>
         });
     });
 
-// Reset canvas when button pressed:
+// Reset canvas when buttong pressed:
 let resetButton = document.querySelector('#reset-btn');
 resetButton.addEventListener('click', () =>
 {
