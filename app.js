@@ -40,7 +40,7 @@ function changePixelColor(e)
         {
             e.target.style.backgroundColor = colorChoice;
         }
-        else
+        else // If user chooses rainbow pen.
         {
             let randomRed = Math.floor(Math.random()*256);
             let randomGreen = Math.floor(Math.random()*256);

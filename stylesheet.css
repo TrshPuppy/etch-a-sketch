@@ -2,9 +2,6 @@
 
 body
 {
-   
-    background-position: fixed;
-    background-size: 200%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
