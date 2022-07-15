@@ -44,3 +44,8 @@ button
     cursor: pointer;
     margin: 5px;
 }
+
+#reset-btn
+{
+    margin-left: 125px;
+}
