@@ -2,10 +2,8 @@
 
 body
 {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    
     background-color:plum;
 }
 
