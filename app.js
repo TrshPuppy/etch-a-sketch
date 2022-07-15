@@ -3,6 +3,21 @@ let selectedDimension = 16;
 let colorChoice = 'black';
 let mouseDown = false;
 
+// Generate backdrop grid:
+ let backdrop = document.querySelector('.backdrop');
+ backdrop.style.gridTemplateColumns = "repeat(16, 1fr)";
+ backdrop.style.gridTemplateRows = "repeat(16, 1fr)";
+
+ for(let h = 0; h < 256; h++)
+ {
+    let backdropPixel = document.createElement('div');
+    backdropPixel.style.backgroundColor = 'black';
+    backdrop.insertAdjacentElement('beforeend', backdropPixel);
+ }
+ 
+
+
+
 // Function to generate canvas grid:
 function generateCanvas(n)
 {

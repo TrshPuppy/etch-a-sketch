@@ -6,12 +6,14 @@ body
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    background-color:plum;
+
 }
 
 .backdrop
 {
     display:grid;
+    width: 500vh;
+    height: 100vh;
 }
 
 .main
@@ -20,6 +22,8 @@ body
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+    position:absolute;
+    z-index: 1;
 }
 
 h1
