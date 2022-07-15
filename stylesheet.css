@@ -3,10 +3,16 @@
 body
 {
     display: grid;
-    
     background-color:plum;
 }
 
+.main
+{
+    display:flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
 h1
 {
     font-family: 'Press Start 2P', sans-serif;
