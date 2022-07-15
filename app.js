@@ -36,7 +36,17 @@ function changePixelColor(e)
 {
     if(e.type === 'mouseover' && mouseDown == true || e.type === 'click')
     {
-        e.target.style.backgroundColor = colorChoice;
+        if(colorChoice != 'rainbow')
+        {
+            e.target.style.backgroundColor = colorChoice;
+        }
+        else
+        {
+            let randomRed = Math.floor(Math.random()*256);
+            let randomGreen = Math.floor(Math.random()*256);
+            let randomBlue = Math.floor(Math.random()*256);
+            e.target.style.backgroundColor = 'rgb('+randomRed+',' +randomGreen+','+randomBlue+')';
+        }
     }
     else
     {
