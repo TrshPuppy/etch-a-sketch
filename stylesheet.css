@@ -6,13 +6,13 @@ body
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-
+    background-color:#bca6f4;
 }
 
 .backdrop
 {
     display:grid;
-    width: 500vh;
+    width: 200vh;
     height: 100vh;
 }
 

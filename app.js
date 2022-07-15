@@ -5,19 +5,21 @@ let mouseDown = false;
 
 // Generate backdrop grid:
  let backdrop = document.querySelector('.backdrop');
- backdrop.style.gridTemplateColumns = "repeat(16, 1fr)";
- backdrop.style.gridTemplateRows = "repeat(16, 1fr)";
+ backdrop.style.gridTemplateColumns = "repeat(64, 1fr)";
+ backdrop.style.gridTemplateRows = "repeat(64, 1fr)";
 
- for(let h = 0; h < 256; h++)
+ for(let h = 0; h < 4096; h++)
  {
     let backdropPixel = document.createElement('div');
-    backdropPixel.style.backgroundColor = 'black';
+    backdropPixel.style.backgroundColor = '#bca6f4';
     backdrop.insertAdjacentElement('beforeend', backdropPixel);
+
+    backdropPixel.addEventListener('mouseover', e =>
+    {
+        backdropPixel.style.backgroundColor = "#cfc1f4";
+    });
  }
  
-
-
-
 // Function to generate canvas grid:
 function generateCanvas(n)
 {
